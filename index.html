@@ -34,12 +34,31 @@
     }
 
     .sun {
-      width: min(70vw, 320px);
-      height: min(70vw, 320px);
-      object-fit: contain;
-      mix-blend-mode: screen;
-      margin-bottom: 10px;
-    }
+  width: min(70vw, 320px);
+  height: min(70vw, 320px);
+  object-fit: contain;
+  mix-blend-mode: screen;
+  margin-bottom: 10px;
+  animation: sunSpin 12s linear infinite, sunGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes sunSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sunGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(255, 220, 120, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(255, 220, 120, 0.9));
+  }
+}
 
     h1 {
       margin: 0;
