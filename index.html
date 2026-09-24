@@ -2,19 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Fairy Tarot</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main id="app">
-    <section id="loading" class="screen loading-screen">
-      <img src="./loading-sun.png" class="loading-sun" alt="">
-      <div class="loading-title">FAIRY TAROT</div>
-      <div class="loading-subtitle">✨ A magical journey awaits ✨</div>
-    </section>
-    <section id="screen" class="screen hidden"></section>
-  </main>
-  <script src="game.js"></script>
+
+  <div id="loading">
+    <img src="images/loading-sun.png" alt="Fairy Tarot Sun">
+    <h1>FAIRY TAROT</h1>
+    <p>✨ A magical journey awaits ✨</p>
+  </div>
+
+  <div id="game" style="display:none;">
+    <h1>FAIRY TAROT</h1>
+    <p>✨ Choose your fairy ✨</p>
+
+    <button onclick="alert('IT WORKS! 🧚‍♀️✨')">
+      DRAW A CARD
+    </button>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("game").style.display = "block";
+    }, 2000);
+  </script>
+
 </body>
 </html>
