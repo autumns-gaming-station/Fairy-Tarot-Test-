@@ -227,3 +227,19 @@ setTimeout(() => {
   loading.classList.add("hidden");
   home();
 }, 1800);
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("loading").classList.add("hidden");
+    document.getElementById("screen").classList.remove("hidden");
+
+    document.getElementById("screen").innerHTML = `
+      <div class="panel">
+        <h1 class="title">FAIRY TAROT</h1>
+        <p class="subtitle">✨ Choose your fairy ✨</p>
+        <button class="btn" onclick="alert('The Fairy Tarot is working! ✨')">
+          DRAW A CARD
+        </button>
+      </div>
+    `;
+  }, 2000);
+});
