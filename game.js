@@ -1,12 +1,13 @@
-const screen = document.getElementById("screen");
+  document.getElementById("backDraw").onclick = drawCard;
+  documconst screen = document.getElementById("screen");
 const loading = document.getElementById("loading");
 
 const assets = {
-  hibellaCard: "images/hibella-card.jpg",
-  hibellaCharacter: "images/hibella-character.png",
-  violettaCard: "images/violetta-card.png",
-  violettaCharacter: "images/violetta-character.png",
-  cardBack: "images/card-back.jpg"
+  hibellaCard: "./hibella-card.jpg",
+  hibellaCharacter: "./hibella-character.png",
+  violettaCard: "./violetta-card.png",
+  violettaCharacter: "./violetta-character.png",
+  cardBack: "./card-back.jpg"
 };
 
 const fairyData = {
@@ -116,8 +117,7 @@ function revealPicker() {
     </div>
   `, "draw");
 
-  document.getElementById("backDraw").onclick = drawCard;
-  document.getElementById("hibellaChoice").onclick = () => revealFairy("hibella");
+ent.getElementById("hibellaChoice").onclick = () => revealFairy("hibella");
   document.getElementById("violettaChoice").onclick = () => revealFairy("violetta");
 }
 
