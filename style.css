@@ -52,3 +52,13 @@ body {
 #game button:active {
   transform: scale(0.96);
 }
+
+.loading-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #fff4d6;
+  text-shadow:
+    0 3px 0 #2a102f,
+    0 0 12px rgba(255, 180, 230, 0.45);
+}
